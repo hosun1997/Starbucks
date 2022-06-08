@@ -1,0 +1,105 @@
+/* 공통스타일 */
+.inner {
+    width: 1200px;
+    position: relative;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.logo {
+    display: block;
+    border: 1px solid red;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+/* 개별스타일 */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;                     /* 애니메이션이 아닌 것들은 헤더 안쪽으로 들어가고 애니메이션은 위로 올라간다 */
+    background-color: #F6F5F0;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+header > .inner {
+    height: 150px;
+    position: relative;
+    background-color: bisque; /* 확인용 */
+}
+
+header .logo {
+    height: 75px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+header .sub-menu {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+}
+
+header .sub-menu ul.menu {
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+header .sub-menu ul.menu li { position: relative; }
+
+header .sub-menu ul.menu li:first-child::before { display: none;}
+
+header .sub-menu ul.menu li::before {
+    content: "";
+    /* display: block; */
+    width: 1px;
+    height: 12px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+header .sub-menu .search input {
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
+    color: gray;
+    font-size: 12px;
+    transition: width .9s;
+}
+
+header .sub-menu .search {
+    height: 34px;
+    position: relative;
+}
+
+header .sub-menu .search .material-symbols-outlined {
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    transition: all 0.9s;
+}
+
+header .sub-menu .search input:focus {
+    width: 200px;
+    border-color: green;
+}
