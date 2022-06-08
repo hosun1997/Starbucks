@@ -1,4 +1,7 @@
 /* 공통스타일 */
+body {
+    height: 3000px;
+}
 .inner {
     width: 1200px;
     position: relative;
@@ -103,3 +106,76 @@ header .sub-menu .search input:focus {
     width: 200px;
     border-color: green;
 }
+
+header .main-menu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+}
+
+header .main-menu .item .item__name {
+    padding: 10px 20px 34px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+header .main-menu .item:hover .item__name {
+    background-color: black;
+    color: green;
+    border-radius: 6px 6px 0 0;
+}
+
+header .main-menu .item .item__contents {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+}
+
+header .main-menu .item:hover .item__contents {
+    display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+    background-color: rgb(51, 47, 47);
+}
+
+header .main-menu .item .item__contents .contents__menu > ul {
+    display: flex;
+    padding: 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li {
+    width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li h4 {
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+header .main-menu .item .item__contents .contents__menu>ul>li ul li {
+    padding: 5px 0;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+}
+
+/*BADGES*/
+header .badges {
+    position: absolute;     /* header에 relative 지정해야됨 */
+    top: 132px;
+    right: 12px;
+  }
+  header .badges .badge {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+    cursor: pointer;
+  }
+/* fixed 확인방법 1. body height를 확장하여 확인 또는 2. section 자리를 미리 잡아서 설정하면 됨.*/
+
